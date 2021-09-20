@@ -80,3 +80,4 @@ check.onchange = () => {
     widthInput.disabled = !check.checked
     heightInput.disabled = widthInput.disabled
 }
+

@@ -11,10 +11,11 @@
     <main class="conversion-main">
         <div class="headerActions">
             <input type="file" id="inputFiles" multiple>
-            <input type="checkbox" name="resize" id="resize">
-            <label for="resize">resize</label>
-            <input type="text" class="widthInput" name="widthInput" id="widthInput" placeholder="width" disabled>
-            <input type="text" class="heightInput" name="heightInput" id="heightInput" placeholder="height" disabled>
+            <label for="resize">
+                <input type="checkbox" name="resize" id="resize">
+                resize</label>
+            <input type="number" class="widthInput" name="widthInput" id="widthInput" placeholder="width" disabled min="50" max="4800" >
+            <input type="number" class="heightInput" name="heightInput" id="heightInput" placeholder="height" disabled min="50" max="4800" >
             <button id="btnConvert">Convert</button>
         </div>
         <table id="tblFiles"></table>
