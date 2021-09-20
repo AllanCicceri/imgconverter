@@ -27,16 +27,23 @@ selectedFiles.onchange = function(e){
     }
 }
 
+function getResizeDimensions(){
+    const w = document.getElementById('widthInput').value
+    const h = document.getElementById('heightInput').value
+    return [w,h]
+}
+
 async function resizeImage (blob, i){
-    
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d');
-    canvas.width = '800'
-    canvas.height = '600'
+    const resize = document.getElementById('resize').checked
+    const [w, h] = resize? getResizeDimensions(): ['800', '600']
+    canvas.width = w
+    canvas.height = h
     
     const img = new Image()
     await new Promise(r => img.onload = r, img.src = blob)
-    ctx.drawImage(img, 0,0, 800, 600)
+    ctx.drawImage(img, 0,0, w, h)
     
     const link = document.createElement('a')
     link.setAttribute('data-auto-download','data-auto-download')
