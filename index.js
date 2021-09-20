@@ -64,3 +64,12 @@ window.onclick = e => {
         tblFiles.removeChild(parent)
     }
 }
+
+
+const check = document.getElementById('resize')
+const widthInput = document.getElementById('widthInput')
+const heightInput = document.getElementById('heightInput')
+check.onchange = () => {
+    widthInput.disabled = !check.checked
+    heightInput.disabled = widthInput.disabled
+}

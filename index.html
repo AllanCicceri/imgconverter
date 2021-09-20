@@ -11,6 +11,10 @@
     <main class="conversion-main">
         <div class="headerActions">
             <input type="file" id="inputFiles" multiple>
+            <input type="checkbox" name="resize" id="resize">
+            <label for="resize">resize</label>
+            <input type="text" class="widthInput" name="widthInput" id="widthInput" placeholder="width" disabled>
+            <input type="text" class="heightInput" name="heightInput" id="heightInput" placeholder="height" disabled>
             <button id="btnConvert">Convert</button>
         </div>
         <table id="tblFiles"></table>
