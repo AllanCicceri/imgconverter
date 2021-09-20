@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversion-main{
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: lightgoldenrodyellow;
+}
+
+.headerActions{
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
