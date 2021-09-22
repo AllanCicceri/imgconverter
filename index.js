@@ -56,8 +56,7 @@ async function resizeImage (blob, i){
 
 btnConvert.onclick = e => {
     for (let i = 0; i < imgPathArr.length; i++) {
-        resizeImage(imgPathArr[i], i)
-                
+        resizeImage(imgPathArr[i], i)                
     }
 
 }
@@ -81,3 +80,22 @@ check.onchange = () => {
     heightInput.disabled = widthInput.disabled
 }
 
+widthInput.onchange = () => {
+    const value = widthInput.value
+
+    if(isNaN(value) || !Number.isInteger(+value) 
+        || value < 50 || value > 2300)
+    {      
+        window.setTimeout(() => widthInput.focus(), 0)
+        widthInput.value = ''
+    }
+}
+heightInput.onchange = () => {
+    const value = heightInput.value
+    if(isNaN(value) || !Number.isInteger(+value) 
+        || value < 50 || value > 2300)
+    {
+        window.setTimeout(() => heightInput.focus(), 0)
+        heightInput.value = ''
+    }
+}
